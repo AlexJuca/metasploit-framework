@@ -147,7 +147,7 @@ class Core
       "unsetg"     => "Unsets one or more global variables",
       "use"        => "Selects a module by name",
       "version"    => "Show the framework and console library version numbers",
-      "spool"      => "Write console output into a file as well the screen"
+      "spool"      => "Write console output into a file as well the screen",
     }
   end
 
@@ -1609,12 +1609,13 @@ class Core
       'platform' => 'Modules affecting this platform',
       'ref'      => 'Modules with a matching ref',
       'type'     => 'Modules of a specific type (exploit, auxiliary, or post)',
+      'rank'     => 'Modules of a specific rank (normal, excellent, or great)',
     }.each_pair do |keyword, description|
       print_line "  #{keyword.ljust 10}:  #{description}"
     end
     print_line
     print_line "Examples:"
-    print_line "  search cve:2009 type:exploit app:client"
+    print_line "  search cve:2009 type:exploit app:client rank:great"
     print_line
   end
 
